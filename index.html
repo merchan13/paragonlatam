@@ -425,31 +425,36 @@
                     </ul>
                 </div>
 
-                <div class="col-md-6 to-animate">
-                    <h3>No dudes en contactarnos</h3>
-                    <div class="form-group ">
-                        <label for="name" class="sr-only">Nombre</label>
-                        <input id="name" class="form-control" placeholder="Nombre" type="text">
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="col-md-6 to-animate">
+                        <h3>No dudes en contactarnos</h3>
+                        <div class="form-group ">
+                            <label for="name" class="sr-only">Nombre</label>
+                            <input id="name" class="form-control" placeholder="Nombre" type="text" required data-validation-required-message="Por favor introduce tu nombre.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group ">
+                            <label for="email" class="sr-only">Email</label>
+                            <input id="email" class="form-control" placeholder="Email" type="email" required data-validation-required-message="Por favor introduce tu correo.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group ">
+                            <label for="phone" class="sr-only">Teléfono</label>
+                            <input id="phone" class="form-control" placeholder="Teléfono" type="text" required data-validation-required-message="Por favor introduce tu teléfono.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group ">
+                            <label for="message" class="sr-only">Mensaje</label>
+                            <textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Mensaje" required data-validation-required-message="Por favor introduce tu mensaje."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group ">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button>
+                        </div>
                     </div>
-                    <div class="form-group ">
-                        <label for="email" class="sr-only">Email</label>
-                        <input id="email" class="form-control" placeholder="Email" type="email">
-                    </div>
-                    <div class="form-group ">
-                        <label for="phone" class="sr-only">Teléfono</label>
-                        <input id="phone" class="form-control" placeholder="Teléfono" type="text">
-                    </div>
-                    <div class="form-group ">
-                        <label for="message" class="sr-only">Mensaje</label>
-                        <textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Mensaje"></textarea>
-                    </div>
-                    <div class="form-group ">
-                        <input class="btn btn-primary btn-lg" value="Enviar mensaje" type="submit">
-                    </div>
-                </div>
+                </form>
             </div>
-
-        </div>
         </div>
         <div id="map" class="to-animate"></div>
     </section>
@@ -486,6 +491,10 @@
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
     <script src="js/google_map.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
     <!-- Main JS (Do not remove) -->
     <script src="js/main.js"></script>

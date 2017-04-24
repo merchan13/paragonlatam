@@ -398,31 +398,36 @@
                     </ul>
                 </div>
 
-                <div class="col-md-6 to-animate">
-                    <h3>Do not hesitate to contact us</h3>
-                    <div class="form-group ">
-                        <label for="name" class="sr-only">Name</label>
-                        <input id="name" class="form-control" placeholder="Name" type="text">
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="col-md-6 to-animate">
+                        <h3>Do not hesitate to contact us</h3>
+                        <div class="form-group ">
+                            <label for="name" class="sr-only">Name</label>
+                            <input id="name" class="form-control" placeholder="Name" type="text" required data-validation-required-message="Please write your name.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group ">
+                            <label for="email" class="sr-only">Email</label>
+                            <input id="email" class="form-control" placeholder="Email" type="email" required data-validation-required-message="Please write your email.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group ">
+                            <label for="phone" class="sr-only">Phone</label>
+                            <input id="phone" class="form-control" placeholder="Phone" type="text" required data-validation-required-message="Please write your phone.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group ">
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Message" required data-validation-required-message="Please write a message."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group ">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
                     </div>
-                    <div class="form-group ">
-                        <label for="email" class="sr-only">Email</label>
-                        <input id="email" class="form-control" placeholder="Email" type="email">
-                    </div>
-                    <div class="form-group ">
-                        <label for="phone" class="sr-only">Phone</label>
-                        <input id="phone" class="form-control" placeholder="Phone" type="text">
-                    </div>
-                    <div class="form-group ">
-                        <label for="message" class="sr-only">Message</label>
-                        <textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
-                    </div>
-                    <div class="form-group ">
-                        <input class="btn btn-primary btn-lg" value="Send message" type="submit">
-                    </div>
-                </div>
+                </form>
             </div>
-
-        </div>
         </div>
         <div id="map" class="to-animate"></div>
     </section>
@@ -459,6 +464,10 @@
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
     <script src="../js/google_map.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
 
     <!-- Main JS (Do not remove) -->
     <script src="../js/main.js"></script>
